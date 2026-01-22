@@ -1,0 +1,27 @@
+import numpy as np
+a=np.array([6,3,7,14,5,19,2])
+print("orginal array:")
+print(a)
+a_md=a.copy()
+a_md[a_md>10]=10
+print("\narray after appling codition(values>10 set to 10):")
+print(a_md)
+a_md1=a.copy()
+a_md1[a_md1<10]=0
+print("\narray after appling codition(values<10 set to 0 ):")
+print(a_md1)
+a_md2=np.where(a>10,10,a)
+print("\nNew array after appling codition(values>10 set to 10):")
+print(a_md2)
+a_md3=np.where(a<10,0,a)
+print("\nNew array after appling codition(values<10 set to 0):")
+print(a_md3)
+a_md4=np.where(a==10,0,a)
+print("\nNew array after appling codition(values==10 set to 0):")
+print(a_md4)
+a_md5=np.where(a!=10,0,a)
+print("\nNew array after appling codition(values!=10 set to 0):")
+print(a_md5)
+
+a_md6=np.where(a>10,20,np.where(a<5,54,a))
+print(a_md6)
