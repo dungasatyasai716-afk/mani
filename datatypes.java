@@ -20,10 +20,11 @@ class Solution {
                 if (x >= -2147483648L && x <= 2147483647L)
                     System.out.println("* int");
                 System.out.println("* long");
-
-            } catch (Exception e) {
-                System.out.println(sc.next() + " can't be fitted anywhere.");
-            }
+                }
+            catch (Exception e)
+                {
+                    System.out.println(sc.next() + " can't be fitted anywhere.");
+                }
         }
         sc.close();
     }
